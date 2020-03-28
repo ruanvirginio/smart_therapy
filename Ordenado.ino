@@ -87,7 +87,6 @@ digitalWrite(LedContador, HIGH);
 }
 if (guarda_estado == HIGH && parada == 1){
   tempoinicial = millis();
-   Serial.println(tempoinicial);
    cont = 0;
     parada=0;
 }
@@ -96,11 +95,8 @@ digitalWrite(LedContador, LOW);
   tempoparcial = millis();
   tempototal = tempoparcial - tempoinicial;
   tempomedio = (tempototal/cont);
-  Serial.println(tempoinicial);
-  Serial.println(tempoparcial);
-  Serial.println(tempototal);
+  Serial.print("Tempo médio de reação do paciente: ");
    Serial.println(tempomedio);
-   Serial.println(cont);
     parada = 1;
 
 }
