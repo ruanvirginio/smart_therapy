@@ -1,9 +1,9 @@
 #include <rExcel.h>
 
-int idx = 0, idx_ant = 1;                // index
+int idx = 0, idx_ant = 1;               
 int           outputTiming = 1000;    
 
-rExcel        myExcel;                // class for Excel data exchange
+rExcel        myExcel;               
 
 long randNumber;
 
@@ -111,11 +111,6 @@ digitalWrite(LedContador, LOW);
   tempoparcial = millis();
   tempototal = tempoparcial - tempoinicial;
   tempomedio = (tempototal/cont);
-  Serial.println(tempoinicial);
-  Serial.println(tempoparcial);
-  Serial.println(tempototal);
-   Serial.println(tempomedio);
-   Serial.println(cont);
    Serial.print("Tempo médio de reação do paciente: ");
    Serial.println(tempomedio);
     parada = 1;
@@ -231,56 +226,4 @@ if (idx !=idx_ant){
         cont = cont + 1;
     }
   }
-
-
 }
-  
-/*
- TESTE DE LEITURA DOS SENSORES IR
- 
- if(a <= 800){
-    digitalWrite(led1, LOW);
-  }else{
-    digitalWrite(led1, HIGH);  
-  }
-    if(b <= 800){
-    digitalWrite(led2, LOW);
-  }else{
-    digitalWrite(led2, HIGH);  
-  }  
-  if(c <= 800){
-    digitalWrite(led3, LOW);
-  }else{
-    digitalWrite(led3, HIGH);  
-  }  
-  if(d <= 800){
-    digitalWrite(led4, LOW);
-  }else{
-    digitalWrite(led4, HIGH);  
-  } 
-  if(e <= 800){
-    digitalWrite(led5, LOW);
-  }else{
-    digitalWrite(led5, HIGH);  
-  }  
-  if(f <= 800){
-    digitalWrite(led6, LOW);
-  }else{
-    digitalWrite(led6, HIGH);  
-  }
-    if(g <= 800){
-    digitalWrite(led7, LOW);
-  }else{
-    digitalWrite(led7, HIGH);  
-  }  if(h <= 800){
-    digitalWrite(led8, LOW);
-  }else{
-    digitalWrite(led8, HIGH);  
-  }
-    if(i <= 800){
-    digitalWrite(led9, LOW);
-  }else{
-    digitalWrite(led9, HIGH);  
-  }
-}
-*/
